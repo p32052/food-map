@@ -66,7 +66,7 @@
 <body>
 
     <div class="container">
-        <h1>店家搜尋</h1>
+        <h1>中科大附近店家搜尋</h1>
         <!-- 篩選條件區域 -->
         <div class="filters">
             <!-- 評分篩選 -->
@@ -108,11 +108,11 @@
     <script>
         // 模擬店家資料
         const stores = [
-            { name: "店家A", lat: 25.0330, lng: 121.5654, rating: 4, price: 80, distance: 150 },
-            { name: "店家B", lat: 25.0380, lng: 121.5630, rating: 5, price: 120, distance: 250 },
-            { name: "店家C", lat: 25.0400, lng: 121.5700, rating: 3, price: 60, distance: 100 },
-            { name: "店家D", lat: 25.0430, lng: 121.5720, rating: 2, price: 200, distance: 400 },
-            { name: "店家E", lat: 25.0320, lng: 121.5610, rating: 5, price: 150, distance: 300 },
+            { name: "HUN混", url: "https://maps.app.goo.gl/9TzWFUoW9twxgyhe9", rating: 4.5, price: 200, distance: 45 },
+            { name: "店家B", url: "https://www.example.com/storeB", rating: 5, price: 120, distance: 250 },
+            { name: "店家C", url: "https://www.example.com/storeC", rating: 3, price: 60, distance: 100 },
+            { name: "店家D", url: "https://www.example.com/storeD", rating: 2, price: 200, distance: 400 },
+            { name: "店家E", url: "https://www.example.com/storeE", rating: 5, price: 150, distance: 300 },
         ];
 
         // 搜尋店家並過濾
@@ -134,7 +134,7 @@
                 const storeElement = document.createElement("li");
                 storeElement.classList.add("store-item");
                 storeElement.innerHTML = `
-                    <h3><a href="https://www.google.com/maps?q=${store.lat},${store.lng}" target="_blank">${store.name}</a></h3>
+                    <h3><a href="${store.url}" target="_blank">${store.name}</a></h3>
                     <p>距離: ${store.distance} 公尺</p>
                     <p>評分: ${store.rating} 顆星</p>
                     <p>價格: ${store.price} 元</p>
